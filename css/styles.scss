@@ -1,0 +1,98 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    -dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+    font-size: 62.5%; /**1rem = 10px **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2;
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+}
+/*Global*/
+img {
+    width: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    background-color: #ffffff;
+    width: 375px;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px #00000041;
+
+    &-header {
+        width: 100%;
+        display: block;
+    }
+    &-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EBEBEB;
+        &-img {
+            border-radius: 50%;
+            border: .5rem solid #ffffff;
+            margin-top: calc(-48px - 5px);
+            background-color: #ffffff;
+        }
+
+        &-title {
+            margin-top: -5rem;
+            color: var(--very-dark-desaturated-blue);
+            span {
+                color: var(--dark-grayish-blue);
+                font-weight: 400;
+                margin-left: 0.7rem;
+            }           
+        }
+        
+        &-text {
+            color: var(--dark-grayish-blue);
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    &-footer {
+        display: flex;
+        justify-content: space-evenly;
+        &-social {
+            text-align: center;
+            color: var(--very-dark-desaturated-blue);
+            margin: 2rem 0;
+            p {
+                letter-spacing: 1px;
+                color: #9A999E;
+                font-weight: 400;
+                font-size: 1.2rem;
+                margin-top: -1rem;
+            }
+        }
+    }
+}
+.card .img-container {
+    width: 9.6rem;
+    height: 9.6rem;
+}
+
